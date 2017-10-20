@@ -38,32 +38,6 @@ def sticky_index(k):
 
 def mutation(letter):
     """returns a mutation for a letter randomly among the other letters"""
-    random_num = np.random.randint(3)
-    if u == 'A':
-        if random_num == 0 :
-            return 'C'
-        if random_num == 1:
-            return 'B'
-        if random_num == 2:
-            return 'D'
-    if u == 'B':
-        if random_num == 0 :
-            return 'A'
-        if random_num == 1:
-            return 'D'
-        if random_num == 2:
-            return 'C'
-    if u == 'C':
-        if random_num == 0 :
-            return 'B'
-        if random_num == 1:
-            return 'A'
-        if random_num == 2:
-            return 'D'
-    if u == 'D':
-        if random_num == 0 :
-            return 'A'
-        if random_num == 1:
-            return 'C'
-        if random_num == 2:
-            return 'B'
+    letters = "ABCD"
+    random_index = np.random.randint(3)
+        return letters.replace(letter,"")[random_index]
